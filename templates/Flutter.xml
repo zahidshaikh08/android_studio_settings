@@ -1,0 +1,102 @@
+<templateSet group="Flutter">
+  <template name="lvBldr" value="ListView.builder(itemCount: $COUNT$,itemBuilder: (_,index) {return $WIDGET$;}, )," description="Create ListView.builder" toReformat="true" toShortenFQNames="true">
+    <variable name="COUNT" expression="&quot;count&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="WIDGET" expression="&quot;widget&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="try" value="try{&#10;&#10;}catch(e,stackTrace){&#10;    showLog(&quot;$METHOD$ exception =====&gt;&gt;&gt; $e&quot;);&#10;    showLog(&quot;$METHOD$ exception stackTrace =====&gt;&gt;&gt; $stackTrace&quot;);&#10;}" description="try catch block for DART" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD" expression="dartMethodName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="setBusy" value="bool isBusy=false;&#10;&#10;void setBusy(bool value){&#10;    if(!mounted) return;&#10;    setState((){&#10;    isBusy=value;&#10;    });&#10;    &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="pof" value="Provider.of&lt;&gt;(context);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="poff" value="context.read&lt;&gt;();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="mq" value="MediaQuery.of(context).size" description="MediaQuery" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="FLUTTER" value="true" />
+      <option name="FLUTTER_RIVERPOD_SNIPPETS" value="true" />
+    </context>
+  </template>
+  <template name="pop" value="Navigator.of(context).pop();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="delayed" value=" await Future.delayed(const Duration(), () {&#10;         &#10;        });" description="" toReformat="false" toShortenFQNames="true" />
+  <template name="stless" value="class $NAME$ extends StatelessWidget {&#10;&#10;  const $NAME$({Key? key}):super(key:key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Container($END$);&#10;  }&#10;}&#10;" description="New Stateless widget" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="stful" value="class $NAME$ extends StatefulWidget {&#10;  &#10;  const $NAME$({Key? key}):super(key:key);&#10;&#10;  @override&#10;  _$NAME$State createState() =&gt; _$NAME$State();&#10;}&#10;&#10;class _$NAME$State extends State&lt;$NAME$&gt; {&#10;&#10;  @override&#10;  void initState(){&#10;    super.initState();&#10;  }&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Container($END$);&#10;  }&#10;}&#10;" description="New Stateful widget" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="postcallback" value="WidgetsBinding.instance.addPostFrameCallback((timestamp){&#10;    &#10;    });" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="futures" value="await Future.wait([&#10;          &#10;        ]);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="importV" value="import 'package:velocity_x/velocity_x.dart';" description="import velocity_x package" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="gap" value="const SizedBox()," description="SizedBox widget" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="sb" value="const SizedBox()," description="SizedBox widget" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="importP" value="import 'package:provider/provider.dart';" description="import provider package" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="sh" value="const SizedBox(height:)," description="SizedBox widget" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="sw" value="const SizedBox(width:)," description="SizedBox widget" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="pushme" value="   Navigator.of(context)&#10;                        .push(MaterialPageRoute(builder: (_) =&gt; $NAME$()));" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+  <template name="tof" value="Theme.of(context)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="FLUTTER" value="true" />
+    </context>
+  </template>
+</templateSet>
